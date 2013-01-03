@@ -1,0 +1,2 @@
+set runtimepath+=~/Dropbox/personal/vim
+source ~/Dropbox/personal/vim/vimrc
