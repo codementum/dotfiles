@@ -1,24 +1,24 @@
 set runtimepath+=~/dotfiles/vim
 
+" Don't use vi settings
+set nocompatible
+set encoding=utf-8
+
+" pathogen
+call pathogen#infect('~/dotfiles/vim/bundle/')
+
 " spell check
 autocmd BufRead *.md setlocal spell spelllang=en_us
 
 " column 80
 :set colorcolumn=80
 
-" pathogen
-call pathogen#infect('~/dotfiles/vim/bundle/')
-
-" Don't use vi settings
-set nocompatible
-set encoding=utf-8
-
 " Turn on line numbering. Turn it off with "set nonu" 
-set rnu
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
-au FocusLost * :set nu
-au FocusGained * :set rnu
+"set rnu
+"au InsertEnter * :set nu
+"au InsertLeave * :set rnu
+"au FocusLost * :set nu
+"au FocusGained * :set rnu
 
 " allow plugin, indent, etc
 filetype off
@@ -35,13 +35,14 @@ set hls
 " Wrap text instead of being on one line
 set lbr
 
-" Change colorscheme from default
-" colorscheme molokai
-
 syntax enable
+
 set background=dark
 "set background=light
+
 colorscheme solarized
+
+" change solarized color with f5
 call togglebg#map("<F5>")
 
 set guifont=Menlo:h14
@@ -61,10 +62,7 @@ set softtabstop=2
 " Allow backspaces
 set backspace=indent,eol,start
 
-" Command to check ~/.vim/skel/ for a tmpl.* file when opening a new file
-autocmd! BufNewFile * silent! 0r ~/dotfiles/vim/skel/tmpl.%:e
-
-" In many terminal emulators the mouse works just fine, thus enable it.
+" In many terminal emulators the mouse works just fine
 if has('mouse')
   set mouse=a
 endif
@@ -97,7 +95,8 @@ map ,v :!open %<.pdf <CR> <CR>
 " Markdown commands
 map ,mv :!open %<.html <CR> 
 map ,md :!markdown %:p > %<.html <CR> 
-au BufRead,BufNewFile *.txt set filetype=markdown
+
+" if md file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Wordcount
@@ -111,31 +110,25 @@ nmap <C-A-V> "+gP
 imap <C-A-V> <ESC><C-A-V>i
 vmap <C-A-C> "+y 
 
-" read date
+" read date, dir, ls
 map ,rd :r !date <CR>
 map ,d :r !pwd <CR>
+map ,ls :r !ls <CR>
 
 if has("gui_running")
     set guioptions=egmrt
     set lines=40
 endif
 
-" resize current buffer by +/- 5 
-nnoremap <silent> <C-w><C-h> :vertical resize -5<cr>
-nnoremap <silent> <C-w><C-j> :resize +5<cr>
-nnoremap <silent> <C-w><C-k> :resize -5<cr>
-nnoremap <silent> <C-w><C-l> :vertical resize +5<cr>
-
+" switch window
 map gw <C-w>w
 map GW <C-w>W
 
+" switch tab
 map GT gT
 
 " autocomplete mode
 set wildmode=list:longest,list:full
-
-" numbers toggle
-nnoremap <F6> :NumbersToggle<CR>
 
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
