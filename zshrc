@@ -30,6 +30,12 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gsa='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 
+# tmux aliases
+alias tn='tmux new -s' 
+alias tls='tmux ls' 
+alias ta='tmux attach -t' 
+alias tk='tmux kill-session -t' 
+
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
