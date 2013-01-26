@@ -7,6 +7,9 @@ set encoding=utf-8
 " pathogen
 call pathogen#infect('~/dotfiles/vim/bundle/')
 
+nnoremap <F3> :NumbersToggle<CR>
+
+
 " spell check
 autocmd BufRead *.md setlocal spell spelllang=en_us
 
@@ -14,11 +17,11 @@ autocmd BufRead *.md setlocal spell spelllang=en_us
 :set colorcolumn=80
 
 " Turn on line numbering. Turn it off with "set nonu" 
-"set rnu
-"au InsertEnter * :set nu
-"au InsertLeave * :set rnu
-"au FocusLost * :set nu
-"au FocusGained * :set rnu
+set rnu
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+au FocusLost * :set nu
+au FocusGained * :set rnu
 
 " allow plugin, indent, etc
 filetype off
@@ -98,6 +101,7 @@ map ,md :!markdown %:p > %<.html <CR>
 
 " if md file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.txt set filetype=markdown
 
 " Wordcount
 map ,wc :!wc % <CR>
