@@ -109,6 +109,11 @@ map ,wc :!wc % <CR>
 " Break sentences (sub .\s for .\n)
 map ,bs :s/\. /\.\r/g <CR>
 
+" paste, no paste
+map ,sp :set paste <CR>
+map ,snp :set nopaste <CR>
+
+
 " copy paste
 nmap <C-A-V> "+gP
 imap <C-A-V> <ESC><C-A-V>i
