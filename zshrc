@@ -22,7 +22,11 @@ alias vimconfig="vim ~/dotfiles/vimrc"
 alias zshconfig="vim ~/dotfiles/zshrc"
 alias pws="python -m SimpleHTTPServer"
 
+alias his="history | grep"
+
+
 # git aliases
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'

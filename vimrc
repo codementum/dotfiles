@@ -87,7 +87,7 @@ map ,m :!make <CR>
 map ,c :!grunt <CR>
 
 " LaTeX commands
-map ,p :!pdflatex -halt-on-error %:p <CR>
+map ,lp :!pdflatex -halt-on-error %:p <CR>
 map ,b :!bibtex %:p:r.aux <CR>
 map ,v :!open %<.pdf <CR> <CR>
 " map ,v :!if [ "$OSTYPE" == "darwin12" ]; then open %<.pdf; else gnome-open %<.pdf; fi <CR> <CR>
