@@ -6,4 +6,4 @@ My dotfiles for zsh, tmux, and vim.
 install
 -------
 
-    ./install.sh
+    cd ~ && git clone git@github.com:codementum/dotfiles.git && ./install.sh
