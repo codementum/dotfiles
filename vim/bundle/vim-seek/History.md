@@ -1,9 +1,12 @@
 ## Known issues
-* Remote back jump needs to account for the characters deleted when repositioning.
 * Shorthand customization of keys not implemented yet.
 
 ## NEXT
 * repeat last seek with ; and ,
+
+## 0.7 - 2013-03-10
+* offer ignore case seek option and custom char aliases.
+* handle multi-byte string seeks correctly.
 
 ## 0.5 - 2013-01-30
 * allow key customization of all seek motions.

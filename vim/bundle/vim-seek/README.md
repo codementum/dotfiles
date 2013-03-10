@@ -4,11 +4,11 @@ Seek is a vim plugin that aims to make inline navigation effortless. The motion 
 
 ## Motivation
 
-The idea was borne out of frustration with getting at arbitrary points in longer lines, especially ones where navigating by word--on top of needing precise counts--gets mangled by symbols. The motion `f` often misfires by taking you to an earlier spot than where you aimed. And a full `/` search is often too much for a simple seek, needing an extra `<Enter>` and leaving a highlight, and might take you away from the current line. Seek only works within the line.
+The idea was borne out of frustration with getting at arbitrary points in longer lines, especially ones where navigating by word—on top of needing precise counts—gets mangled by symbols. The motion `f` often misfires by taking you to an earlier spot than where you aimed. And a full `/` search is often too much for a simple seek, needing an extra `<Enter>` and leaving a highlight, and might take you away from the current line. Seek only works within the line.
 
 ## What about substitute?
 
-Vim maps the key `s` to substitute. That it is the perfect mnemonic to seek is a fortunate coincidence, but the choice was made because substitute (without a count) is an often inefficient command, being--ironically--easily substituted by others. Seek doesn't take a count, so whenever you supply a count to `s` it will map to the substitute command. 
+Vim maps the key `s` to substitute. That it is the perfect mnemonic to seek is a fortunate coincidence, but the choice was made because substitute (without a count) is an often inefficient command, being—ironically—easily substituted by others. Seek doesn't take a count by default, so whenever you supply a count to `s` it will map to the substitute command. However, if you don't use the substitute commmand at all, you can add `let g:seek_subst_disable = 1` to your `.vimrc` in order to allow counts for actual seeks.
 
 The single character substitution can be accomplished with either `1s` or `cl`. And `S`, which is remapped to seek backwards, is completely substituted by `cc`.
 
@@ -16,17 +16,17 @@ However, if you don't want to give up substitute, you can scroll down to the Cus
 
 ## I already use EasyMotion..
 
-Seek solves a different problem, and both are powerful tools. I use EasyMotion myself and love it--it's great for navigating across lines and around the file. But within the line, seek has more speed, for a very important reason: with seek you already know the keys you need to type before you even type `s`. Using EasyMotion there's a split second delay for it to generate the targets and another for your brain to process them. With seek you just type three quick keystrokes; you already know what to type.
+Seek solves a different problem, and both are powerful tools. I use EasyMotion myself and love it—it's great for navigating across lines and around the file. But within the line, seek has more speed, for a very important reason: with seek you already know the keys you need to type before you even type `s`. Using EasyMotion there's a split second delay for it to generate the targets and another for your brain to process them. With seek you just type three quick keystrokes; you already know what to type.
 
 # Advanced
 
 Additional motions are provided as operator-pending only. That is, they only work when used after `d`, `c` or `y`, and not by themselves.
 
-The motion `x` is to seek what `t` is to `f`. Standing for 'cut short \[of the target\]', it acts up to the first character typed, but doesn't include it. This is in contrast to `s` itself, which does include the first character typed--to keep it consistent with `f` behavior--but not the second character.
+The motion `x` is to seek what `t` is to `f`. Standing for 'cut short \[of the target\]', it acts up to the first character typed, but doesn't include it. This is in contrast to `s` itself, which does include the first character typed—to keep it consistent with `f` behavior—but not the second character.
 
 ## Jumping motions
 
-My personal favorites, `r` (remote jump) and `p` (presential jump) act on the next word containing the characters typed. They're the equivalent of `iw`, but `r` snipes the target word from a distance, and `p` jumps to the target and stays there. So you can use `yrth' to yank the next word containing "th" without leaving your position (in reality vim goes there and jumps back), and that's useful for pasting it to where you are. Or you can type `code' to jump to the next word with "de", deleting it and leaving you in insert mode.
+My personal favorites, `r` (remote jump) and `p` (presential jump) act on the next word containing the characters typed. They're the equivalent of `iw`, but `r` snipes the target word from a distance, and `p` jumps to the target and stays there. So you can use `yrth` to yank the next word containing "th" without leaving your position (in reality vim goes there and jumps back), and that's useful for pasting it to where you are. Or you can type `code` to jump to the next word with "de", deleting around it (aw) and leaving you in insert mode.
 
 Whereas `r` and `p` use the inner word text object, the respective `u` and `o` are the equivalent outer word `aw`.
 
@@ -79,6 +79,7 @@ Though it must always follow the order, you can simply use the defaults for keys
 
 # Planned next
 
+* Create a doc file moving customization help out of this readme.
 * Repeating the last seek with `;` and `,` (same keys used for `f` and `t`).
 * (Optional) Respect user's `ignorecase` and `smartcase` settings, so that you can seek to a capital letter by typing the lowercase character.
 * Condensed jump mappings to allow you to use just one of `r` or `p` (or yet another key) for all jump motions, whereby you define which you want to be remote and which presential (e.g. `c` lends itself more to being presential, `y` to be remote, while `d` has good use of both).
