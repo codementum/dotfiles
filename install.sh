@@ -10,3 +10,7 @@ cd dotfiles
 
 git submodule init
 git submodule update
+
+# copy zsh theme to oh-my-zsh
+cd zsh/oh-my-zsh/themes
+ln -s ../../themes/knuth.zsh-theme knuth.zsh-theme
