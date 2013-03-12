@@ -9,7 +9,6 @@ call pathogen#infect('~/dotfiles/vim/bundle/')
 
 nnoremap <F3> :NumbersToggle<CR>
 
-
 " spell check
 autocmd BufRead *.md setlocal spell spelllang=en_us
 
