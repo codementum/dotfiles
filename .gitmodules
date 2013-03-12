@@ -1,0 +1,21 @@
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/bundle/numbers.vim"]
+	path = vim/bundle/numbers.vim
+	url = https://github.com/myusuf3/numbers.vim.git
+[submodule "vim/bundle/vim-commentary"]
+	path = vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/bundle/vim-jade"]
+	path = vim/bundle/vim-jade
+	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vim/bundle/vim-seek"]
+	path = vim/bundle/vim-seek
+	url = https://github.com/goldfeld/vim-seek.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
