@@ -54,3 +54,7 @@ bindkey -v
 setopt AUTO_CD
 
 alias tmux="TERM=screen-256color-bce tmux"
+
+
+# nvm node version manager
+. ~/.nvm/nvm.sh
