@@ -25,6 +25,10 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gsa='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 
+# make aliases
+alias m='make'
+alias mc='make clean'
+
 # tmux aliases
 alias tn='tmux new -s' 
 alias tls='tmux ls' 
