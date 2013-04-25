@@ -13,7 +13,11 @@ alias vimconfig="vim ~/dotfiles/vimrc"
 alias zshconfig="vim ~/dotfiles/zshrc"
 alias pws="python -m SimpleHTTPServer"
 
+alias his="history | grep"
+
+
 # git aliases
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
@@ -53,4 +57,10 @@ setopt AUTO_CD
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+<<<<<<< HEAD
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+=======
+
+# nvm node version manager
+. ~/.nvm/nvm.sh
+>>>>>>> 356ef686a0f63b4f149df26430188c9a8c749cf1
