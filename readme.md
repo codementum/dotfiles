@@ -15,4 +15,4 @@ See [http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-
 
 In general, use the following command:
 
-    git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+    git submodule add http://github.com/tpope/vim-fugitive.git vim/bundle/vim-fugitive
