@@ -50,6 +50,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
+export PYTHONPATH=/Library/Python/2.7/site-packages/
+ 
 
 export EDITOR="vim"
 bindkey -v 
@@ -59,6 +61,10 @@ setopt AUTO_CD
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+<<<<<<< HEAD
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+=======
 
 # nvm node version manager
 . ~/.nvm/nvm.sh
+>>>>>>> 356ef686a0f63b4f149df26430188c9a8c749cf1
