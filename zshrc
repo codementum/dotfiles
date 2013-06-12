@@ -61,10 +61,8 @@ setopt AUTO_CD
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-<<<<<<< HEAD
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-=======
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin 
 
 # nvm node version manager
 . ~/.nvm/nvm.sh
->>>>>>> 356ef686a0f63b4f149df26430188c9a8c749cf1
