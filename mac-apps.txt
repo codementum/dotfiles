@@ -1,0 +1,27 @@
+Apps
+====
+(note: keys may be in txt files in Dropbox)
+
+- Dropbox
+- xCode
+- Alfred
+- iTerm2
+- iStat Menu
+- Papers2
+- Camtasia
+- Instacast
+- TeX
+- Keynote
+- Pages
+- Numbers
+- Sublime Text 2
+- App Store Purchases as necessary
+
+Utils
+====
+
+- Generate ssh keys and add to Github/Bitbucket
+- Solarized for iTerm2: http://ethanschoonover.com/solarized
+- nodegh: `npm install gh -g`
+- after dropbox loads, set up active, inactive, and tdl symlinks
+- pandoc
