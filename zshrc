@@ -15,6 +15,7 @@ alias pws="python -m SimpleHTTPServer"
 
 alias his="history | grep"
 
+alias sag="sudo apt-get"
 
 # git aliases
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -65,4 +66,4 @@ alias tmux="TERM=screen-256color-bce tmux"
 PATH=$PATH:$HOME/.rvm/bin 
 
 # nvm node version manager
-. ~/.nvm/nvm.sh
+#. ~/.nvm/nvm.sh
