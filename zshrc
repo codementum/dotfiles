@@ -49,7 +49,7 @@ plugins=(git brew github node npm perl python redis-cli vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
 export PYTHONPATH=/Library/Python/2.7/site-packages/
  
 
@@ -62,7 +62,9 @@ setopt AUTO_CD
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 PATH=$PATH:$HOME/.rvm/bin 
 
 # nvm node version manager
-. ~/.nvm/nvm.sh
+# . ~/.nvm/nvm.sh
