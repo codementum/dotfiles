@@ -63,6 +63,10 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# JAVA Home set
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # nvm node version manager
-. ~/.nvm/nvm.sh
+#. ~/.nvm/nvm.sh
