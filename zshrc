@@ -15,6 +15,7 @@ alias pws="python -m SimpleHTTPServer"
 
 alias his="history | grep"
 
+alias sag="sudo apt-get"
 
 # git aliases
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -35,6 +36,9 @@ alias tls='tmux ls'
 alias ta='tmux attach -t' 
 alias tk='tmux kill-session -t' 
 
+# R alias
+alias rrun='R CMD BATCH' 
+
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
@@ -49,7 +53,7 @@ plugins=(git brew github node npm perl python redis-cli vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
 export PYTHONPATH=/Library/Python/2.7/site-packages/
  
 
@@ -62,6 +66,8 @@ setopt AUTO_CD
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 PATH=$PATH:$HOME/.rvm/bin 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
