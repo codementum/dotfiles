@@ -52,7 +52,9 @@ set guifont=Menlo:h14
 
 " Allow jj to trigger ESC
 imap jj <Esc>
-map ;; A;<Esc>
+
+" ;; toggles a ; at EOL (see http://stackoverflow.com/a/18157585/2405902)
+nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
 
 " Map leader to ,
 let mapleader = ","
