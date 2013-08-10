@@ -52,6 +52,7 @@ set guifont=Menlo:h14
 
 " Allow jj to trigger ESC
 imap jj <Esc>
+map ;; A;<Esc>
 
 " Map leader to ,
 let mapleader = ","
