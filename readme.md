@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My dotfiles and plugins for vim, zsh, and tmux.
+My dotfiles and plugins for vim, zsh, and tmux. Also a list of software I use.
 
 install
 -------
