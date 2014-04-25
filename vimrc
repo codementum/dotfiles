@@ -34,13 +34,6 @@ set hls
 
 syntax enable
 
-" if has('gui_running')
-"   set background=light
-" else
-"   let g:solarized_termcolors=256
-"   set background=dark
-" endif
-
 colorscheme solarized
 
 set background=dark
@@ -48,7 +41,7 @@ set background=dark
 " change solarized color with f5
 call togglebg#map("<F5>")
 
-set guifont=Menlo:h14
+set guifont=Source\ Code\ Pro:h14
 
 " Allow jj to trigger ESC
 imap jj <Esc>
