@@ -41,7 +41,7 @@ set background=light
 " change solarized color with f5
 call togglebg#map("<F5>")
 
-set guifont=Menlo:h14
+set guifont=Source\ Code\ Pro:h14
 
 " Allow jj to trigger ESC
 imap jj <Esc>

@@ -12,6 +12,7 @@ alias c="clear"
 alias vimconfig="vim ~/dotfiles/vimrc"
 alias zshconfig="vim ~/dotfiles/zshrc"
 alias pws="python -m SimpleHTTPServer"
+alias tdl="vim ~/tdl.md"
 
 alias his="history | grep"
 
