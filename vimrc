@@ -34,16 +34,9 @@ set hls
 
 syntax enable
 
-" if has('gui_running')
-"   set background=light
-" else
-"   let g:solarized_termcolors=256
-"   set background=dark
-" endif
-
 colorscheme solarized
 
-set background=dark
+set background=light
 
 " change solarized color with f5
 call togglebg#map("<F5>")
