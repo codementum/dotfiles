@@ -36,7 +36,7 @@ syntax enable
 
 colorscheme solarized
 
-set background=light
+set background=dark
 
 " change solarized color with f5
 call togglebg#map("<F5>")
