@@ -49,6 +49,9 @@ imap jj <Esc>
 " ;; toggles a ; at EOL (see http://stackoverflow.com/a/18157585/2405902)
 nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
 
+" Open TDL file
+nnoremap tdl :vsp ~/tdl.md <CR>
+
 " Map leader to ,
 let mapleader = ","
 
