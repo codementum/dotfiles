@@ -84,6 +84,7 @@ set foldlevel=99
 " compile commands
 map ,g :!grunt
 map ,m :!make
+map ,r :!make pdf
 
 " if md or txt file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
