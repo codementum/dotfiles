@@ -13,6 +13,7 @@ alias vimconfig="vim ~/dotfiles/vimrc"
 alias zshconfig="vim ~/dotfiles/zshrc"
 alias pws="python -m SimpleHTTPServer"
 alias tdl="vim ~/tdl.md"
+alias otdl="xdg-open ~/tdl.md"
 
 alias his="history | grep"
 
@@ -34,6 +35,7 @@ alias mc='make clean'
 # tmux aliases
 alias tn='tmux new -s' 
 alias tls='tmux ls' 
+alias tsl='tmux ls' 
 alias ta='tmux attach -t' 
 alias tk='tmux kill-session -t' 
 

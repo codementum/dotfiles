@@ -97,8 +97,7 @@ au BufRead,BufNewFile *.txt set filetype=markdown
 map ,wc :w !wc <CR>
 
 " paste, no paste
-map ,sp :set paste <CR>
-map ,snp :set nopaste <CR>
+set pastetoggle=<leader>z
 
 " copy paste
 nmap <C-A-V> "+gP
