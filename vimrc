@@ -40,13 +40,6 @@ set hls
 
 syntax enable
 
-" if has('gui_running')
-"   set background=light
-" else
-"   let g:solarized_termcolors=256
-"   set background=dark
-" endif
-
 colorscheme solarized
 
 set background=dark
@@ -54,13 +47,16 @@ set background=dark
 " change solarized color with f5
 call togglebg#map("<F5>")
 
-set guifont=Menlo:h14
+set guifont=Source\ Code\ Pro:h14
 
 " Allow jj to trigger ESC
 imap jj <Esc>
 
 " ;; toggles a ; at EOL (see http://stackoverflow.com/a/18157585/2405902)
 nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
+
+" Open TDL file
+nnoremap tdl :vsp ~/tdl.md <CR>
 
 " Map leader to ,
 let mapleader = ","
@@ -97,6 +93,7 @@ set foldlevel=99
 " compile commands
 map ,g :!grunt
 map ,m :!make
+map ,r :!make pdf
 
 " if md or txt file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -106,8 +103,7 @@ au BufRead,BufNewFile *.txt set filetype=markdown
 map ,wc :w !wc <CR>
 
 " paste, no paste
-map ,sp :set paste <CR>
-map ,snp :set nopaste <CR>
+set pastetoggle=<leader>z
 
 " copy paste
 nmap <C-A-V> "+gP

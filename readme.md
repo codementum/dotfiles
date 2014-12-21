@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My dotfiles and plugins for vim, zsh, and tmux.
+My dotfiles and plugins for vim, zsh, and tmux. Also a list of software I use.
 
 install
 -------
@@ -30,6 +30,13 @@ apt-get install:
 - pandoc
 - texlive
 - build-essential
+- gnome-gmail
+
+F.lux:
+
+    sudo add-apt-repository ppa:kilian/f.lux
+    sudo apt-get update
+    sudo apt-get install fluxgui
 
 TODO check if apt-get available:
 - inkscape

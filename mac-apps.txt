@@ -25,3 +25,4 @@ Utils
 - nodegh: `npm install gh -g`
 - after dropbox loads, set up active, inactive, and tdl symlinks
 - pandoc
+- flux

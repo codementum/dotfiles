@@ -12,6 +12,8 @@ alias c="clear"
 alias vimconfig="vim ~/dotfiles/vimrc"
 alias zshconfig="vim ~/dotfiles/zshrc"
 alias pws="python -m SimpleHTTPServer"
+alias tdl="vim ~/tdl.md"
+alias otdl="xdg-open ~/tdl.md"
 
 alias his="history | grep"
 
@@ -33,6 +35,7 @@ alias mc='make clean'
 # tmux aliases
 alias tn='tmux new -s' 
 alias tls='tmux ls' 
+alias tsl='tmux ls' 
 alias ta='tmux attach -t' 
 alias tk='tmux kill-session -t' 
 
@@ -73,7 +76,7 @@ PATH=$PATH:$HOME/.rvm/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # JAVA Home set
-export JAVA_HOME="$(/usr/libexec/java_home)"
+#export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # nvm node version manager
 #. ~/.nvm/nvm.sh
