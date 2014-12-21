@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
+export PATH=$PATH:$HOME/local/bin
 export PYTHONPATH=/Library/Python/2.7/site-packages/
  
 
