@@ -11,14 +11,20 @@ call pathogen#infect('~/dotfiles/vim/bundle/')
 autocmd BufRead *.md setlocal spell spelllang=en_us
 
 " column 80
-:set colorcolumn=80
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
 
 " Turn on line numbering. Turn it off with "set nonu" 
-set rnu
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
-au FocusLost * :set nu
-au FocusGained * :set rnu
+if exists('+rnu')
+  set rnu
+  au InsertEnter * :set nu
+  au InsertLeave * :set rnu
+  au FocusLost * :set nu
+  au FocusGained * :set rnu
+else
+  set number
+endif
 
 " allow plugin, indent, etc
 filetype off
