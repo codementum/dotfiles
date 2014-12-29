@@ -1,3 +1,5 @@
+set background=dark
+
 set runtimepath+=~/dotfiles/vim
 
 " Don't use vi settings
@@ -35,8 +37,6 @@ set hls
 syntax enable
 
 colorscheme solarized
-
-set background=dark
 
 " change solarized color with f5
 call togglebg#map("<F5>")
