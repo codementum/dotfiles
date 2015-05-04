@@ -9,15 +9,10 @@ ZSH_THEME="knuth"
 
 # aliases
 alias c="clear"
-alias vimconfig="vim ~/dotfiles/vimrc"
-alias zshconfig="vim ~/dotfiles/zshrc"
 alias pws="python -m SimpleHTTPServer"
 alias tdl="vim ~/tdl.md"
+alias clip="xclip -sel clip -i"
 alias otdl="xdg-open ~/tdl.md"
-
-alias his="history | grep"
-
-alias sag="sudo apt-get"
 
 # git aliases
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -33,6 +28,7 @@ alias m='make'
 alias mc='make clean'
 
 # tmux aliases
+alias tmux="TERM=screen-256color-bce tmux"
 alias tn='tmux new -s' 
 alias tls='tmux ls' 
 alias tsl='tmux ls' 
@@ -42,11 +38,8 @@ alias tk='tmux kill-session -t'
 # R alias
 alias rrun='R CMD BATCH' 
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+export EDITOR="vim"
+bindkey -v 
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -59,14 +52,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/Library/Python/2.7/site-packages:/usr/local/Cellar/ruby/1.9.3-p327/bin
 export PYTHONPATH=/Library/Python/2.7/site-packages/
  
-
-export EDITOR="vim"
-bindkey -v 
-
 # no cd needed
 setopt AUTO_CD
-
-alias tmux="TERM=screen-256color-bce tmux"
 
 # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -74,8 +61,31 @@ alias tmux="TERM=screen-256color-bce tmux"
 PATH=$PATH:$HOME/.rvm/bin 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# JAVA Home set
-#export JAVA_HOME="$(/usr/libexec/java_home)"
+# Matt.Might's Console Frequency commands
+export HISTFILESIZE=10000
+export HISTSIZE=10000
 
-# nvm node version manager
-#. ~/.nvm/nvm.sh
+# Change to most recently used directory:
+if [ -f ~/.lastdir ]; then
+    cd "`cat ~/.lastdir`"
+fi
+ 
+export LASTDIR="/"
+ 
+function prompt_command {
+ 
+  # Remember where we are:
+  pwd > ~/.lastdir
+ 
+  # Record new directory on change.
+  newdir=`pwd`
+  if [ ! "$LASTDIR" = "$newdir" ]; then
+    markdir
+  fi
+ 
+  export LASTDIR=$newdir
+}
+ 
+export PROMPT_COMMAND="prompt_command"
+
+precmd() { eval "$PROMPT_COMMAND" }
