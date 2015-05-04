@@ -1,3 +1,5 @@
+set background=dark
+
 set runtimepath+=~/dotfiles/vim
 
 " Don't use vi settings
@@ -11,14 +13,20 @@ call pathogen#infect('~/dotfiles/vim/bundle/')
 autocmd BufRead *.md setlocal spell spelllang=en_us
 
 " column 80
-:set colorcolumn=80
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
 
 " Turn on line numbering. Turn it off with "set nonu" 
-set rnu
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
-au FocusLost * :set nu
-au FocusGained * :set rnu
+if exists('+rnu')
+  set rnu
+  au InsertEnter * :set nu
+  au InsertLeave * :set rnu
+  au FocusLost * :set nu
+  au FocusGained * :set rnu
+else
+  set number
+endif
 
 " allow plugin, indent, etc
 filetype off
@@ -35,8 +43,6 @@ set hls
 syntax enable
 
 colorscheme solarized
-
-set background=dark
 
 " change solarized color with f5
 call togglebg#map("<F5>")
@@ -97,8 +103,7 @@ au BufRead,BufNewFile *.txt set filetype=markdown
 map ,wc :w !wc <CR>
 
 " paste, no paste
-map ,sp :set paste <CR>
-map ,snp :set nopaste <CR>
+set pastetoggle=<leader>z
 
 " copy paste
 nmap <C-A-V> "+gP
@@ -125,3 +130,15 @@ nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
+
+" Limelight
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.7
