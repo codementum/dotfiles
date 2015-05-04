@@ -49,7 +49,7 @@ alias rrun='R CMD BATCH'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew github node npm perl python redis-cli vi-mode)
+plugins=(git brew github node npm perl python redis-cli)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,10 +67,10 @@ setopt AUTO_CD
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-PATH=$PATH:$HOME/.rvm/bin 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#
+#PATH=$PATH:$HOME/.rvm/bin 
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # JAVA Home set
 #export JAVA_HOME="$(/usr/libexec/java_home)"
