@@ -27,6 +27,8 @@ alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gsa='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias ggh="git checkout gh-pages && git merge master && git push origin gh-pages && git checkout -"
+
 
 # make aliases
 alias m='make'
