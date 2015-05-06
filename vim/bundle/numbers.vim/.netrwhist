@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/lane/dev/valt-website'
+let g:netrw_dirhist_2='/home/lane/tmp'
+let g:netrw_dirhist_3='/home/lane/dev/valt-website/people'
+let g:netrw_dirhist_4='/home/lane/dev/proact/kattan-conversion'
+let g:netrw_dirhist_5='/home/lane/dev/proact/luyao-conversion'
+let g:netrw_dirhist_6='/home/lane/dev/proact/kattan-conversion'
