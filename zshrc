@@ -17,8 +17,10 @@
   alias clip="xclip -sel clip -i"
   if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias o="xdg-open"
+    alias otdl="xdg-open ~/tdl.md"
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias o="open"
+    alias otdl="open ~/tdl.md"
   fi
   
   # git aliases
@@ -96,3 +98,6 @@
   export PROMPT_COMMAND="prompt_command"
   
   precmd() { eval "$PROMPT_COMMAND" }
+
+PERL_MB_OPT="--install_base \"/Users/lane/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/lane/perl5"; export PERL_MM_OPT;

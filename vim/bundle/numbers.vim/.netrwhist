@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/usr/local/texlive/2013/texmf-dist'
+let g:netrw_dirhist_2='/usr/local/texlive/2013/texmf-dist/tex'
+let g:netrw_dirhist_3='/Users/lane/dev/aesthetics/image-selection-scripts'
+let g:netrw_dirhist_4='/Users/lane/Dropbox/active/vis-course-2014/labs/lab10'
+let g:netrw_dirhist_5='/Users/lane/inactive'
+let g:netrw_dirhist_6='/Users/lane/Dropbox/active/nsf-nrt-elke'
+let g:netrw_dirhist_7='/Users/lane/dev/clustering/experimentr/public/results'
