@@ -70,35 +70,3 @@
   
   PATH=$PATH:$HOME/.rvm/bin 
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Matt.Might's Console Frequency commands
-  export HISTFILESIZE=10000
-  export HISTSIZE=10000
-  
-  # Change to most recently used directory:
-  if [ -f ~/.lastdir ]; then
-      cd "`cat ~/.lastdir`"
-  fi
-   
-  export LASTDIR="/"
-   
-  function prompt_command {
-   
-    # Remember where we are:
-    pwd > ~/.lastdir
-   
-    # Record new directory on change.
-    newdir=`pwd`
-    if [ ! "$LASTDIR" = "$newdir" ]; then
-      markdir
-    fi
-   
-    export LASTDIR=$newdir
-  }
-   
-  export PROMPT_COMMAND="prompt_command"
-  
-  precmd() { eval "$PROMPT_COMMAND" }
-
-PERL_MB_OPT="--install_base \"/Users/lane/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/lane/perl5"; export PERL_MM_OPT;
