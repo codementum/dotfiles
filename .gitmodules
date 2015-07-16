@@ -25,3 +25,12 @@
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "vim/bundle/goyo.vim"]
+  path = vim/bundle/goyo.vim
+  url = git@github.com:junegunn/goyo.vim.git
+[submodule "vim/bundle/limelight.vim"]
+  path = vim/bundle/limelight.vim
+  url = https://github.com/junegunn/limelight.vim.git
+[submodule "vim/bundle/vim-gitgutter"]
+  path = vim/bundle/vim-gitgutter
+  url = git@github.com:airblade/vim-gitgutter.git
