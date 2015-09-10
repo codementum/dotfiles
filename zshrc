@@ -22,6 +22,13 @@
     alias o="open"
     alias otdl="open ~/tdl.md"
   fi
+
+  # document templates
+  alias nsf="cp -r ~/inactive/template-nsf ./"
+  alias expense="cp -r ~/inactive/template-expense-report ./"
+  alias tvcg="cp -r ~/inactive/template-tvcg ./"
+  alias chi="cp -r ~/inactive/template-chi ./"
+  alias pro="cp -r ~/inactive/template-prospectus ./"
   
   # git aliases
   alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
