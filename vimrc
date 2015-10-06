@@ -93,11 +93,15 @@ set foldlevel=99
 " compile commands
 map ,g :!grunt
 map ,m :!make
+map ,c :!make veryclean
 map ,r :!make pdf
 
 " if md or txt file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.txt set filetype=markdown
+au BufRead,BufNewFile *.markdown set filetype=markdown
+
+" if json, set type javascript
+au BufRead,BufNewFile *.json set filetype=javascript
 
 " Wordcount
 map ,wc :w !wc <CR>
