@@ -1,5 +1,11 @@
 set background=dark
 
+let itermenv=$ITERM_PROFILE
+
+if itermenv == 'Copy of Default'
+  set background=light
+endif
+
 set runtimepath+=~/dotfiles/vim
 
 " Don't use vi settings
@@ -53,7 +59,7 @@ set guifont=Source\ Code\ Pro:h14
 imap jj <Esc>
 
 " ;; toggles a ; at EOL (see http://stackoverflow.com/a/18157585/2405902)
-nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR>
+nnoremap ;; :s/\v(.)$/\=submatch(1)==';' ? '' : submatch(1).';'<CR> :noh <CR>
 
 " Open TDL file
 nnoremap tdl :vsp ~/tdl.md <CR>
@@ -94,7 +100,9 @@ set foldlevel=99
 map ,g :!grunt
 map ,m :!make
 map ,c :!make veryclean
-map ,r :!make pdf
+
+" Marked
+map ,r :!open -a "Marked 2" % <CR>
 
 " if md or txt file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -107,7 +115,9 @@ au BufRead,BufNewFile *.json set filetype=javascript
 map ,wc :w !wc <CR>
 
 " paste, no paste
+nnoremap <leader>z :set invpaste paste?<CR>
 set pastetoggle=<leader>z
+set showmode
 
 " copy paste
 nmap <C-A-V> "+gP

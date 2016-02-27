@@ -40,6 +40,11 @@
   alias gb='git branch'
   alias gsa='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
   alias ggh="git checkout gh-pages && git merge master && git push origin gh-pages && git checkout -"
+
+  # git writing aliases
+  alias gitwa='git diff --word-diff=porcelain origin/master | grep -e "^+[^+]" | wc -w | xargs'
+  alias gitwd='git diff --word-diff=porcelain origin/master | grep -e "^-[^-]" | wc -w | xargs'
+  alias gitw='echo $(($(gitwa) - $(gitwd)))'
   
   # make aliases
   alias m='make'
@@ -78,3 +83,6 @@
   
   PATH=$PATH:$HOME/.rvm/bin 
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+  export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+
