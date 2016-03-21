@@ -14,6 +14,7 @@
   alias c="clear"
   alias pws="python -m SimpleHTTPServer"
   alias tdl="vim ~/tdl.md"
+  alias t="vim ~/tdl.md"
   alias clip="xclip -sel clip -i"
   if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias o="xdg-open"
@@ -22,6 +23,8 @@
     alias o="open"
     alias otdl="open ~/tdl.md"
   fi
+  alias pwc='function _pwc(){ pdftotext $1 - | wc -w; };_pwc'
+
 
   # document templates
   alias nsf="cp -r ~/inactive/template-nsf ./"
@@ -34,6 +37,8 @@
   # git aliases
   alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
   alias gd='git diff'
+  alias gdh='git diff HEAD~1'
+  alias gdc='git diff HEAD'
   alias gc='git commit'
   alias gca='git commit -a'
   alias gco='git checkout'

@@ -106,6 +106,7 @@ map ,r :!open -a "Marked 2" % <CR>
 
 " if md or txt file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.Rmd set filetype=markdown
 au BufRead,BufNewFile *.markdown set filetype=markdown
 
 " if json, set type javascript
@@ -156,3 +157,11 @@ let g:limelight_conceal_guifg = '#777777'
 
 " Default: 0.5
 let g:limelight_default_coefficient = 0.7
+
+" Relative number yank
+nmap [p :<C-U>exe '+' . (v:count1) . 't.'<CR>
+
+nmap ss :source ~/.vimrc<CR>
+
+
+
