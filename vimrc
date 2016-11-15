@@ -1,5 +1,7 @@
 set background=dark
 
+"set synmaxcol=120
+
 let itermenv=$ITERM_PROFILE
 
 if itermenv == 'Copy of Default'
@@ -163,5 +165,11 @@ nmap [p :<C-U>exe '+' . (v:count1) . 't.'<CR>
 
 nmap ss :source ~/.vimrc<CR>
 
-
-
+" Add argument (can be negative, default 1) to global variable i.
+" Return value of i before the change.
+" example: :let i = 1 | %s/abc/\='xyz_' . Inc()/g
+function Inc(...)
+  let result = g:i
+  let g:i += a:0 > 0 ? a:1 : 1
+  return result
+endfunction
