@@ -53,6 +53,10 @@ if [ ! -h /usr/local/share/npm/bin/jsonlint ]; then
   npm install -g jsonlint
 fi
 
+if [ ! -h /usr/local/share/npm/bin/webpack ]; then
+  npm install -g webpack
+fi
+
 # install python
 if [ ! -x /usr/local/bin/python ]; then
   brew install python
