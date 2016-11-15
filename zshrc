@@ -9,10 +9,37 @@
   export EDITOR="vim"
   bindkey -v 
 
+
+  export IEEEVIS_AWS_USER="laneharrison"
+
 # aliases
   # general
   alias c="clear"
   alias pws="python -m SimpleHTTPServer"
+  alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+
+  # Extracts files with out remembering the godawful commands.
+  extract () {
+      if [ -f $1 ] ; then
+          case $1 in
+              *.tar.bz2)   tar xvjf $1        ;;
+              *.tar.gz)    tar xvzf $1     ;;
+              *.bz2)       bunzip2 $1       ;;
+              *.rar)       unrar x $1     ;;
+              *.gz)        gunzip $1     ;;
+              *.tar)       tar xvf $1        ;;
+              *.tbz2)      tar xvjf $1      ;;
+              *.tgz)       tar xvzf $1       ;;
+              *.zip)       unzip $1     ;;
+              *.Z)         uncompress $1  ;;
+              *.7z)        7z x $1    ;;
+              *)           echo "'$1' cannot be extracted via >extract<" ;;
+          esac
+      else
+          echo "'$1' is not a valid file"
+      fi
+  }
+
   alias tdl="vim ~/tdl.md"
   alias t="vim ~/tdl.md"
   alias clip="xclip -sel clip -i"
@@ -33,6 +60,11 @@
   alias chi="cp -r ~/inactive/template-chi ./"
   alias pro="cp -r ~/inactive/template-prospectus ./"
   alias irb="cp -r ~/inactive/template-irb ./"
+  alias letter="cp -r ~/inactive/template-letter ./"
+  alias article="cp -r ~/inactive/template-article ./"
+
+
+  alias citations="cat ~/dev/cv/papers.bib ~/dev/cv/journals.bib ~/dev/cv/misc.bib"
   
   # git aliases
   alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -45,6 +77,8 @@
   alias gb='git branch'
   alias gsa='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
   alias ggh="git checkout gh-pages && git merge master && git push origin gh-pages && git checkout -"
+
+  git config --global alias.slog "log --oneline --topo-order --graph"
 
   # git writing aliases
   alias gitwa='git diff --word-diff=porcelain origin/master | grep -e "^+[^+]" | wc -w | xargs'
@@ -62,6 +96,7 @@
   alias tsl='tmux ls' 
   alias ta='tmux attach -t' 
   alias tk='tmux kill-session -t' 
+  alias tt='tmux attach -t tdl' 
   
   # R alias
   alias rrun='R CMD BATCH' 
@@ -91,3 +126,5 @@
 
   export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
