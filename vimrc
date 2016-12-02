@@ -99,12 +99,12 @@ set foldlevelstart=99
 set foldlevel=99
 
 " compile commands
-map ,g :!grunt
-map ,m :!make
-map ,c :!make veryclean
+map <Leader>g :!grunt
+map <Leader>m :!make
+map <Leader>c :!make veryclean
 
 " Marked
-map ,r :!open -a "Marked 2" % <CR>
+map <Leader>r :!open -a "Marked 2" % <CR>
 
 " if md or txt file, set type markdown
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -115,7 +115,7 @@ au BufRead,BufNewFile *.markdown set filetype=markdown
 au BufRead,BufNewFile *.json set filetype=javascript
 
 " Wordcount
-map ,wc :w !wc <CR>
+map <Leader>wc :w !wc <CR>
 
 " paste, no paste
 nnoremap <leader>z :set invpaste paste?<CR>
@@ -173,3 +173,24 @@ function Inc(...)
   let g:i += a:0 > 0 ? a:1 : 1
   return result
 endfunction
+
+
+
+" Some Useful Additions
+
+set undofile " Store a copy of the file, so you can undo even after closing files
+set lazyredraw " redraw screen onlt when necessary  
+
+
+" Delete trailing white space on save, useful for Python and CoffeeScript 
+" Shamelessly stolen from another .vimrc
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
+
+
+
